@@ -22,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;
@@ -42,12 +43,16 @@ public class MainActivity extends AppCompatActivity {
     MealAdapter adapter;
     Toolbar toolbar;
     ProgressBar progressBar;
+    FloatingActionButton fab;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // عرفت زرار لي بينقل لصفحة الوصفات
+        fab = findViewById(R.id.wasfaPage);
 
         // ربط الصوره ب ملف xml و عرفت الفايربيز
         logout = findViewById(R.id.logout);
@@ -60,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getBaseContext(), loginActivity.class));
                 finish();
+            }
+        });
+
+        // عرفته انه لما ادوس علب الزرار يتنقل لصفحة الوصفات
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(),WasafatyActivity.class));
             }
         });
 
