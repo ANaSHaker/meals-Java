@@ -57,7 +57,6 @@ public class WasafatyActivity extends AppCompatActivity {
         book_id = new ArrayList<>();
         book_title = new ArrayList<>();
         book_author = new ArrayList<>();
-        book_pages = new ArrayList<>();
 
         storeDataInArrays();
 
@@ -85,7 +84,6 @@ public class WasafatyActivity extends AppCompatActivity {
                 book_id.add(cursor.getString(0));
                 book_title.add(cursor.getString(1));
                 book_author.add(cursor.getString(2));
-                book_pages.add(cursor.getString(3));
             }
             empty_imageview.setVisibility(View.GONE);
             no_data.setVisibility(View.GONE);

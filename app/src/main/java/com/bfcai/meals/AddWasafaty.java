@@ -12,7 +12,7 @@ import android.widget.EditText;
 public class AddWasafaty extends AppCompatActivity {
 
     // عرفنا الحاجه لي هنحتاجها من صفحه الديزاين
-    EditText title_input, author_input, pages_input;
+    EditText title_input, author_input;
     Button add_button;
 
     @Override
@@ -25,7 +25,7 @@ public class AddWasafaty extends AppCompatActivity {
         author_input = findViewById(R.id.author_input);
         add_button = findViewById(R.id.add_button);
 
-        // قوالناله لما يدوس علي الزرار
+        // قولناله لما يدوس علي الزرار
         // يعمل انشاء وصفة جديده في الداتابيز
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override

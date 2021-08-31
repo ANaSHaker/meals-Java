@@ -65,7 +65,7 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.ViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(v.getContext(), "Do Something With this Click", Toast.LENGTH_SHORT).show();
+             //       Toast.makeText(v.getContext(), "Do Something With this Click", Toast.LENGTH_SHORT).show();
                 }
             });
         }
