@@ -37,5 +37,6 @@ public class AddWasafaty extends AppCompatActivity {
                 startActivity(new Intent(getBaseContext(),WasafatyActivity.class));
             }
         });
+
     }
 }

@@ -87,7 +87,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void extractMeals() {
+        // بقوله العناصر وكدا هتتعرض في ريكويست جديده في انهي صفحه
         RequestQueue queue = Volley.newRequestQueue(this);
+        // قولتله هستخدم الميثود get عشان هعرض البيانات وعرفته انها هتتعرض في array
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, JSON_URL, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
